@@ -17,8 +17,8 @@ export const BTGENERIC: PrinterType = {
   name: 'Generic Bluetooth Receipt Printer',
   createWebDevice: () =>
     new Bluetooth({
-      services: ['e7810a71-73ae-499d-8c15-faa9aef0c3f2'],
-      characteristic: 'bef8d6c9-9c21-4c9e-b632-bd58c1009f9f',
+      services: [0x1011],
+      characteristic: '00001101-0000-1000-8000-00805F9B34FB',
       buffersize: 20
     })
 };
