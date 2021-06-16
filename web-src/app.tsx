@@ -18,7 +18,7 @@ import { BTGENERIC } from './btgeneric';
 import githubribbon from './styles/forkme_right_green_007200.svg';
 import openbravologo from './styles/OBWhite_Footer.png';
 
-export interface AppProps {}
+export interface AppProps { }
 
 export interface AppState {
   text: string;
@@ -68,7 +68,7 @@ export class App extends Component<AppProps, AppState> {
       await printer.print(this.state.text);
       alert('Success.');
     } catch (error) {
-      alert('Cannot print.');
+      alert('Cannot print：' + error);
     }
   }
 
