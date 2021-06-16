@@ -46,11 +46,7 @@ export class Bluetooth implements WebDevice {
     }
 
     this.device = await navigator.bluetooth.requestDevice({
-      filters: [
-        {
-          services: this.printertype.services
-        }
-      ]
+      acceptAllDevices: true
     });
   }
 
